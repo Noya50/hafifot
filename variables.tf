@@ -15,8 +15,7 @@ variable "location" {
 
 variable "routes" {
   description = "(Required) List of routes for the route table."
-  type = list(object({
-    name                   = string
+  type = map(object({
     address_prefix         = string
     next_hop_type          = string
     next_hop_in_ip_address = string
